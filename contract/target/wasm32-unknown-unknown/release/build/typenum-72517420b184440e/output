@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/vadkutsen/rust/near/hello-world-interface/contract/target/wasm32-unknown-unknown/release/build/typenum-72517420b184440e/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/vadkutsen/rust/near/hello-world-interface/contract/target/wasm32-unknown-unknown/release/build/typenum-72517420b184440e/out/op.rs
