@@ -46986,7 +46986,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const {
   networkId
-} = (0, _config.default)('development');
+} = (0, _config.default)("development" || 'development');
 
 function App() {
   // use React Hooks to store name in component state
@@ -47183,7 +47183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54626" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55013" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
