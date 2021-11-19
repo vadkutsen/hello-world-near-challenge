@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'hello-world-interface'
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'hello.groovy4.testnet'
 
 function getConfig(env) {
   switch (env) {
