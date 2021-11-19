@@ -220,7 +220,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "hello-world-interface"
+name = "hello"
 version = "0.1.0"
 dependencies = [
  "near-sdk",

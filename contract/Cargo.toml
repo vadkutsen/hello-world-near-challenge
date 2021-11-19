@@ -1,5 +1,5 @@
 [package]
-name = "hello-world-interface"
+name = "hello"
 version = "0.1.0"
 authors = ["Vadym <vadkutsen@gmail.com>"]
 edition = "2018"
