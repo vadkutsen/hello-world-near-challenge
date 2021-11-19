@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME || 'hello.groovy6.testnet'
+const CONTRACT_NAME = process.env.CONTRACT_NAME || 'dev-1637330485933-85385098231849'
 
 
 function getConfig(env) {
@@ -19,7 +19,7 @@ function getConfig(env) {
     return {
       networkId: 'testnet',
       nodeUrl: 'https://rpc.testnet.near.org',
-      contractName: 'hello',
+      contractName: 'dev-1637330485933-85385098231849', //CONTRACT_NAME,
       walletUrl: 'https://wallet.testnet.near.org',
       helperUrl: 'https://helper.testnet.near.org',
       explorerUrl: 'https://explorer.testnet.near.org',
