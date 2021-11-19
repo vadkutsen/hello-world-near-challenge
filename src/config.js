@@ -1,5 +1,6 @@
 const CONTRACT_NAME = process.env.CONTRACT_NAME || 'hello.groovy6.testnet'
 
+
 function getConfig(env) {
   switch (env) {
 
@@ -18,7 +19,7 @@ function getConfig(env) {
     return {
       networkId: 'testnet',
       nodeUrl: 'https://rpc.testnet.near.org',
-      contractName: CONTRACT_NAME,
+      contractName: 'hello.groovy6.testnet',
       walletUrl: 'https://wallet.testnet.near.org',
       helperUrl: 'https://helper.testnet.near.org',
       explorerUrl: 'https://explorer.testnet.near.org',
