@@ -46772,7 +46772,7 @@ __exportStar(require("./browser-connect"), exports);
 require("error-polyfill");
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js","./browser-connect":"../node_modules/near-api-js/lib/browser-connect.js","error-polyfill":"../node_modules/error-polyfill/index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1637330485933-85385098231849" || 'hello.groovy4.testnet';
+const CONTRACT_NAME = "dev-1637330485933-85385098231849" || 'hello.groovy6.testnet';
 
 function getConfig(env) {
   switch (env) {
@@ -46986,7 +46986,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const {
   networkId
-} = (0, _config.default)("development" || 'development');
+} = (0, _config.default)('development');
 
 function App() {
   // use React Hooks to store name in component state
@@ -47183,7 +47183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56638" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54626" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
