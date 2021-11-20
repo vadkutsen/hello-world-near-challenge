@@ -46772,19 +46772,19 @@ __exportStar(require("./browser-connect"), exports);
 require("error-polyfill");
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js","./browser-connect":"../node_modules/near-api-js/lib/browser-connect.js","error-polyfill":"../node_modules/error-polyfill/index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1637330485933-85385098231849" || 'hello';
+const CONTRACT_NAME = 'groovy7.testnet';
 
 function getConfig(env) {
   switch (env) {
     case 'production':
     case 'mainnet':
       return {
-        networkId: 'mainnet',
-        nodeUrl: 'https://rpc.mainnet.near.org',
+        networkId: 'testnet',
+        nodeUrl: 'https://rpc.testnet.near.org',
         contractName: CONTRACT_NAME,
-        walletUrl: 'https://wallet.near.org',
-        helperUrl: 'https://helper.mainnet.near.org',
-        explorerUrl: 'https://explorer.mainnet.near.org'
+        walletUrl: 'https://wallet.testnet.near.org',
+        helperUrl: 'https://helper.testnet.near.org',
+        explorerUrl: 'https://explorer.testnet.near.org'
       };
 
     case 'development':
@@ -46800,12 +46800,12 @@ function getConfig(env) {
 
     case 'betanet':
       return {
-        networkId: 'betanet',
-        nodeUrl: 'https://rpc.betanet.near.org',
+        networkId: 'testnet',
+        nodeUrl: 'https://rpc.testnet.near.org',
         contractName: CONTRACT_NAME,
-        walletUrl: 'https://wallet.betanet.near.org',
-        helperUrl: 'https://helper.betanet.near.org',
-        explorerUrl: 'https://explorer.betanet.near.org'
+        walletUrl: 'https://wallet.testnet.near.org',
+        helperUrl: 'https://helper.testnet.near.org',
+        explorerUrl: 'https://explorer.testnet.near.org'
       };
 
     case 'local':
@@ -46984,9 +46984,10 @@ var _config = _interopRequireDefault(require("./config"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import banner from './assets/near_banner.png';
 const {
   networkId
-} = (0, _config.default)("development" || 'development');
+} = (0, _config.default)('testnet');
 
 function App() {
   // use React Hooks to store name in component state
@@ -47003,9 +47004,11 @@ function App() {
   _react.default.useEffect(() => {
     // in this case, we only care to query the contract when signed in
     if (window.walletConnection.isSignedIn()) {
+      console.log('Starting get_name request...');
       window.contract.get_name({
         account_id: window.accountId
       }).then(nameFromContract => {
+        console.log('Got response. Name: ' + nameFromContract);
         set_name(nameFromContract);
       });
     }
@@ -47029,13 +47032,13 @@ function App() {
   return (
     /*#__PURE__*/
     // use React Fragment, <>, to avoid wrapping elements in unnecessary divs
-    _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("button", {
+    _react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, "Account: ", window.accountId, /*#__PURE__*/_react.default.createElement("button", {
       className: "link",
       style: {
         float: 'right'
       },
       onClick: _utils.logout
-    }, "Sign out"), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, /*#__PURE__*/_react.default.createElement("label", {
+    }, "Sign out")), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, /*#__PURE__*/_react.default.createElement("label", {
       htmlFor: "greeting",
       style: {
         color: 'var(--secondary)',
@@ -47074,6 +47077,7 @@ function App() {
         } finally {
           // re-enable the form, whether the call succeeded or failed
           fieldset.disabled = false;
+          set_name('');
         } // update local `name` variable to match persisted value
 
 
@@ -47101,7 +47105,7 @@ function App() {
       }
     }, /*#__PURE__*/_react.default.createElement("input", {
       autoComplete: "off",
-      defaultValue: name,
+      defaultValue: "",
       id: "name",
       onChange: e => setButtonDisabled(e.target.value === name),
       style: {
@@ -47183,7 +47187,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55352" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60332" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
